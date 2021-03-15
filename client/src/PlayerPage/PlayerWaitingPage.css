@@ -1,0 +1,58 @@
+.Create{
+    background-color:rgb(255,255,255);
+    width:500px;
+    text-align:center;
+    border-radius:10px;
+    padding: 30px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+a{
+    margin: 5px 5px;
+    width: 300px;
+    border-radius: 50px;
+    text-align:center;
+    vertical-align:middle;
+}
+
+.room-code{
+    font-size:50px;
+    color:rgb(2, 126, 58);
+}
+
+.room-input{
+    position: relative;
+    display: block;
+    background: #ffffff;
+    font-family: "Arial";
+    border-radius: 30px;
+    margin: 0px auto 20px auto;
+    border: 1px solid #cccddd;
+    font-size: 0.9 rem;
+    padding: 10px 30px;
+    width: 100%;
+    max-width: 200px;
+    min-width: 180px;
+    text-align:center;
+}
+
+.room-input:hover{
+    box-shadow:  0 0px 5px 1px #9ecaed;
+    transition: box-shadow 0.2s;
+}
+
+.room-input:focus{
+    box-shadow:  0 0px 5px 1px #ffc300;
+    outline: none;
+    transition: box-shadow 1s;
+}
+
+.btn-join{
+    border-radius:30px;
+    width: 80px;
+}
