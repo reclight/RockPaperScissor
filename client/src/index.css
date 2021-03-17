@@ -26,7 +26,8 @@ html, body {
 
 .ContentBox{
   background-color:rgb(255,255,255);
-  width:500px;
+  min-width:400px;
+  max-width:600px;
   text-align:center;
   border-radius:10px;
   padding: 30px;
@@ -36,4 +37,20 @@ html, body {
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 425px) {
+  .ContentBox{
+    background-color:rgb(255,255,255);
+    min-width:300px;
+    text-align:center;
+    border-radius:10px;
+    padding: 30px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
 }

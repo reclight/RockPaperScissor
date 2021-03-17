@@ -41,8 +41,8 @@ export class PlayerWaitingPage extends React.Component{
     this.socket.emit('playerJoinGame', data);
 
     // Set the appropriate properties for the current player.
-    App.myRole = 'Player';
-    App.Player.myName = data.playerName;
+    //App.myRole = 'Player';
+    //App.Player.myName = data.playerName;
   }
 
   onRoomChange = (event) => {

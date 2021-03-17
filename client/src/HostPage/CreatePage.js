@@ -9,6 +9,8 @@ const SERVER = "http://127.0.0.1:8080";
 export class CreatePage extends React.Component{
   state = {
     room: {gameId:'Creating', mySocketId: null},
+    players: [],
+    score: []
   }
   
   socket;
@@ -22,6 +24,7 @@ export class CreatePage extends React.Component{
     socket.on('connection', () => {
       this.handleCreateRoom();
       this.handleRoomNumber();
+      this.handlePlayerJoin();
     })
     this.socket = socket;
   }
@@ -33,6 +36,22 @@ export class CreatePage extends React.Component{
   handleRoomNumber = () => {
     this.socket.on('newGameCreated', (response) => {
       this.setState({room: response})
+    });
+  }
+
+  handlePlayerJoin = () => {
+    this.socket.on('playerJoinedRoom', (response) => {
+      console.log(response);
+      if(this.state.players.length>0 && this.state.players[0].mySocketId == response.mySocketId){
+        this.setState({players:[response]});
+      }
+      else{
+        this.setState(prevState =>
+          (
+            {players:[...prevState.players, response]}
+          )
+        )
+      }
     });
   }
 
